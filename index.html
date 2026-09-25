@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Digital Point | Online & Documentation Services</title>
+
+  <meta name="description"
+        content="Digital Point - Fast online and documentation services including PAN Card, Aadhaar, Passport, GST, ITR, Birth Certificate, Marriage Certificate and more.">
+
+  <meta name="keywords"
+        content="Digital Point Ahmedabad, PAN Card, Aadhaar Card, Passport, GST, ITR, Birth Certificate, Marriage Certificate, Online Services">
+
+  <meta name="author" content="Digital Point">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f7fb;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    /* HEADER */
+    header {
+      background: linear-gradient(135deg, #071952, #088395);
+      color: white;
+      padding: 18px 7%;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 3px 15px rgba(0,0,0,0.2);
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: bold;
+      white-space: nowrap;
+    }
+
+    .logo span {
+      color: #ffd43b;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: bold;
+      font-size: 15px;
+    }
+
+    nav a:hover {
+      color: #ffd43b;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 85vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 70px 7%;
+      background:
+        linear-gradient(rgba(7,25,82,0.85), rgba(8,131,149,0.85)),
+        linear-gradient(135deg, #071952, #088395);
+      color: white;
+    }
+
+    .hero-content {
+      max-width: 850px;
+    }
+
+    .hero h1 {
+      font-size: clamp(38px, 7vw, 70px);
+      margin-bottom: 15px;
+    }
+
+    .hero h1 span {
+      color: #ffd43b;
+    }
+
+    .hero h2 {
+      font-size: clamp(22px, 4vw, 35px);
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 30px;
+      opacity: 0.95;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 25px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn-primary {
+      background: #25D366;
+      color: white;
+    }
+
+    .btn-secondary {
+      background: white;
+      color: #071952;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 70px 7%;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .section-title h2 {
+      font-size: 38px;
+      color: #071952;
+      margin-bottom: 10px;
+    }
+
+    .section-title p {
+      color: #666;
+    }
+
+    /* ABOUT */
+    .about {
+      background: white;
+    }
+
+    .about-box {
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+      font-size: 18px;
+    }
+
+    .highlight {
+      color: #088395;
+      font-weight: bold;
+    }
+
+    /* SERVICES */
+    .services {
+      background: #f5f7fb;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .service-card {
+      background: white;
+      padding: 25px 18px;
+      border-radius: 18px;
+      text-align: center;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+      transition: 0.3s;
+      border-top: 4px solid #088395;
+    }
+
+    .service-card:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+    }
+
+    .service-icon {
+      font-size: 40px;
+      margin-bottom: 12px;
+    }
+
+    .service-card h3 {
+      color: #071952;
+      margin-bottom: 8px;
+      font-size: 19px;
+    }
+
+    .service-card p {
+      color: #666;
+      font-size: 14px;
+    }
+
+    /* WHY US */
+    .why {
+      background: white;
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .why-card {
+      text-align: center;
+      padding: 25px;
+      border-radius: 15px;
+      background: #f5f7fb;
+    }
+
+    .why-card .icon {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .why-card h3 {
+      color: #071952;
+      margin-bottom: 8px;
+    }
+
+    /* CONTACT */
+    .contact {
+      background: linear-gradient(135deg, #071952, #088395);
+      color: white;
+    }
+
+    .contact .section-title h2 {
+      color: white;
+    }
+
+    .contact .section-title p {
+      color: #eee;
+    }
+
+    .contact-container {
+      max-width: 900px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+
+    .contact-card {
+      background: rgba(255,255,255,0.12);
+      padding: 30px 20px;
+      text-align: center;
+      border-radius: 18px;
+      backdrop-filter: blur(5px);
+    }
+
+    .contact-card .icon {
+      font-size: 35px;
+      margin-bottom: 10px;
+    }
+
+    .contact-card h3 {
+      margin-bottom: 8px;
+    }
+
+    .contact-card a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* CTA */
+    .cta {
+      text-align: center;
+      background: #ffd43b;
+      color: #071952;
+    }
+
+    .cta h2 {
+      font-size: 35px;
+      margin-bottom: 10px;
+    }
+
+    .cta p {
+      margin-bottom: 20px;
+    }
+
+    .cta .btn {
+      background: #071952;
+      color: white;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #050d2b;
+      color: white;
+      text-align: center;
+      padding: 25px 7%;
+    }
+
+    footer p {
+      margin: 5px 0;
+      font-size: 14px;
+    }
+
+    /* WHATSAPP FLOATING BUTTON */
+    .whatsapp {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: #25D366;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      font-size: 31px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.25);
+      z-index: 9999;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(37,211,102,0.6);
+      }
+      70% {
+        box-shadow: 0 0 0 15px rgba(37,211,102,0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(37,211,102,0);
+      }
+    }
+
+    /* MOBILE */
+    @media (max-width: 768px) {
+
+      header {
+        padding: 15px 5%;
+      }
+
+      .nav {
+        flex-direction: column;
+      }
+
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      nav a {
+        margin: 0 7px;
+        font-size: 14px;
+      }
+
+      .hero {
+        min-height: 75vh;
+        padding: 60px 5%;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      section {
+        padding: 55px 5%;
+      }
+
+      .section-title h2 {
+        font-size: 30px;
+      }
+
+      .cta h2 {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="nav">
+
+      <div class="logo">
+        💻 <span>Digital Point</span> 🖥️
+      </div>
+
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+    </div>
+  </header>
+
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+
+    <div class="hero-content">
+
+      <h1>💻 <span>Digital Point</span> 🖥️</h1>
+
+      <h2>Fast & Reliable Online Services</h2>
+
+      <p>
+        आपका काम आसान बनाने के लिए सभी जरूरी
+        Online, Documentation और Digital Services
+        एक ही जगह पर।
+      </p>
+
+      <div class="buttons">
+
+        <a
+          class="btn btn-primary"
+          href="https://wa.me/916351225922?text=Hello%20Digital%20Point%2C%20mujhe%20aapki%20service%20ke%20baare%20mein%20jaankari%20chahiye."
+          target="_blank">
+          💬 WhatsApp Now
+        </a>
+
+        <a class="btn btn-secondary" href="#services">
+          🔎 View Services
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+
+    <div class="section-title">
+      <h2>About Digital Point</h2>
+      <p>Your trusted digital service point</p>
+    </div>
+
+    <div class="about-box">
+
+      <p>
+        Thank you for contacting
+        <span class="highlight">💻 Digital Point 🖥️</span>.
+      </p>
+
+      <br>
+
+      <p>
+        हम विभिन्न प्रकार के Online Form, Government
+        Documentation और Digital Services में सहायता प्रदान करते हैं।
+      </p>
+
+      <br>
+
+      <p>
+        हमारा उद्देश्य है कि आपका काम
+        <span class="highlight">Fast, Simple & Convenient</span>
+        तरीके से पूरा हो।
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+
+    <div class="section-title">
+
+      <h2>Our Services</h2>
+
+      <p>
+        सभी जरूरी Digital और Documentation Services
+      </p>
+
+    </div>
+
+
+    <div class="service-grid">
+
+
+      <div class="service-card">
+        <div class="service-icon">🛂</div>
+        <h3>Passport</h3>
+        <p>Passport application & related online assistance.</p>
+      </div>
+
+
+      <div class="service-card">
+        <div class="service-icon">🪪</div>
+        <h3>PAN Card</h3>
+        <p>PAN card application and correction assistance.</p>
+      </div>
+
+
+      <div class="service-card">
+        <div class="service-icon">🆔</div>
+        <h3>Aadhaar Services</h3>
+        <p>Aadhaar appointment, update assistance & e-print.</p>
+      </div>
+
+
+      <div class="service-card">
+        <div class="service-icon">👶</div>
+        <h3>Birth Certificate</h3>
+        <p>Birth certificate application and correction assistance.</p>
+      </div>
+
+
+      <div class="service-card">
+        <div class="service-icon">💍</div>
+        <h3>Marriage Certificate</h3>
+        <p>Marriage certificate related documentation assistance.</p>
+      </div>
+
+
+      <div class="service-card">
+        <div class="service-icon">📊</div>
+        <h3>ITR</h3>
+        <p>Income Tax Return related online assistance.</p>
+      </div>
+
+
+      <div class="service-card">
+        <div class="service-icon">🏢</div>
+        <h3>GST Return</h3>
+        <p>GST registration and return related assistance.</p>
+      </div>
+
+
+      <div class="service-card">
+        <div class="service-icon">🏥</div>
+        <h3>Ayushman Card</h3>
+        <p>Ayushman card related online assistance.</p>
+      </div>
+
+
+      <div class="service-card">
+        <div class="service-icon">❤️</div>
+        <h3>ABHA Card</h3>
+        <p>ABHA health ID related digital services.</p>
+      </div>
+
+
+      <div class="service-card">
+        <div class="service-icon">👷</div>
+        <h3>e-Shram Card</h3>
+        <p>e-Shram registration and related assistance.</p>
+      </div>
+
+
+      <div class="service-card">
+        <div class="service-icon">🍚</div>
+        <h3>Ration Card</h3>
+        <p>Ration card application and related assistance.</p>
+      </div>
+
+
+      <div class="service-card">
+        <div class="service-icon">🗳️</div>
+        <h3>Election Card</h3>
+        <p>Voter/Election card related online services.</p>
+      </div>
+
+
+      <div class="service-card">
+        <div class="service-icon">💰</div>
+        <h3>Income Certificate</h3>
+        <p>Income certificate application assistance.</p>
+      </div>
+
+
+      <div class="service-card">
+        <div class="service-icon">🚗</div>
+        <h3>Driving Licence</h3>
+        <p>Driving licence related online assistance.</p>
+      </div>
+
+
+      <div class="service-card">
+        <div class="service-icon">🍴</div>
+        <h3>FSSAI</h3>
+        <p>FSSAI registration related assistance.</p>
+      </div>
+
+
+      <div class="service-card">
+        <div class="service-icon">🏦</div>
+        <h3>Banking Services</h3>
+        <p>Banking related digital assistance.</p>
+      </div>
+
+
+      <div class="service-card">
+        <div class="service-icon">💸</div>
+        <h3>Money Transfer</h3>
+        <p>Money transfer related digital service.</p>
+      </div>
+
+
+      <div class="service-card">
+        <div class="service-icon">📄</div>
+        <h3>Xerox & Printing</h3>
+        <p>Black & white and colour Xerox/printing.</p>
+      </div>
+
+
+      <div class="service-card">
+        <div class="service-icon">📸</div>
+        <h3>Passport Photos</h3>
+        <p>Urgent passport-size photo service.</p>
+      </div>
+
+
+      <div class="service-card">
+        <div class="service-icon">🖼️</div>
+        <h3>Lamination</h3>
+        <p>Document lamination service available.</p>
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+  <!-- WHY US -->
+  <section class="why">
+
+    <div class="section-title">
+
+      <h2>Why Choose Digital Point?</h2>
+
+      <p>Simple, fast and convenient service</p>
+
+    </div>
+
+
+    <div class="why-grid">
+
+
+      <div class="why-card">
+
+        <div class="icon">⚡</div>
+
+        <h3>Fast Service</h3>
+
+        <p>
+          आपके काम को जल्दी और व्यवस्थित तरीके से
+          पूरा करने में सहायता।
+        </p>
+
+      </div>
+
+
+      <div class="why-card">
+
+        <div class="icon">🤝</div>
+
+        <h3>Helpful Assistance</h3>
+
+        <p>
+          Online forms और documentation में
+          आसान सहायता।
+        </p>
+
+      </div>
+
+
+      <div class="why-card">
+
+        <div class="icon">📱</div>
+
+        <h3>Easy Contact</h3>
+
+        <p>
+          WhatsApp के माध्यम से आसानी से संपर्क करें।
+        </p>
+
+      </div>
+
+
+      <div class="why-card">
+
+        <div class="icon">💻</div>
+
+        <h3>Multiple Services</h3>
+
+        <p>
+          कई digital और documentation services
+          एक ही जगह।
+        </p>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+  <!-- CTA -->
+  <section class="cta">
+
+    <h2>Need Our Service?</h2>
+
+    <p>
+      अभी WhatsApp पर message करें और अपने काम की जानकारी लें।
+    </p>
+
+    <a
+      class="btn"
+      href="https://wa.me/916351225922?text=Hello%20Digital%20Point%2C%20mujhe%20service%20ke%20baare%20mein%20jaankari%20chahiye."
+      target="_blank">
+      💬 Contact on WhatsApp
+    </a>
+
+  </section>
+
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+
+    <div class="section-title">
+
+      <h2>Contact Us</h2>
+
+      <p>हमसे संपर्क करने के लिए नीचे दिए गए options का उपयोग करें।</p>
+
+    </div>
+
+
+    <div class="contact-container">
+
+
+      <div class="contact-card">
+
+        <div class="icon">📱</div>
+
+        <h3>Phone / WhatsApp</h3>
+
+        <a href="tel:+916351225922">
+          +91 63512 25922
+        </a>
+
+      </div>
+
+
+      <div class="contact-card">
+
+        <div class="icon">💬</div>
+
+        <h3>WhatsApp</h3>
+
+        <a
+          href="https://wa.me/916351225922"
+          target="_blank">
+          Chat With Us
+        </a>
+
+      </div>
+
+
+      <div class="contact-card">
+
+        <div class="icon">📍</div>
+
+        <h3>Service Area</h3>
+
+        <p>
+          Ahmedabad, Gujarat
+        </p>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <p>
+      © 2026 <strong>Digital Point</strong>. All Rights Reserved.
+    </p>
+
+    <p>
+      Fast Online & Documentation Services
+    </p>
+
+  </footer>
+
+
+  <!-- FLOATING WHATSAPP -->
+  <a
+    class="whatsapp"
+    href="https://wa.me/916351225922?text=Hello%20Digital%20Point%2C%20mujhe%20aapki%20service%20chahiye."
+    target="_blank"
+    aria-label="Chat on WhatsApp">
+    💬
+  </a>
+
+
+</body>
+</html>
